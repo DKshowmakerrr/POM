@@ -75,7 +75,6 @@ public class BaseSetup {
 	@AfterClass
 	public void tearDown() {
 		Thread.sleep(2000);
-		driver.quit();
 	}
 	
 
