@@ -8,9 +8,11 @@ import org.testng.annotations.Test;
 
 import Test.Base.BaseSetup;
 import Test.PagesSetup.SignInPage;
+import Test.PagesSetup.SignInPageFactory;
 public class SignInTest extends BaseSetup {
 	private WebDriver driver;
 	public SignInPage signInPage;
+	public SignInPageFactory signInPageFactory;
 	
 	@BeforeClass
 	public void setUp() {
@@ -20,8 +22,14 @@ public class SignInTest extends BaseSetup {
 	@Test
 	public void SignIn() {
 		System.out.println(driver);
-		signInPage = new SignInPage(driver);
+		//signInPage = new SignInPage(driver);
 		assertEquals(signInPage.getSignInPageTitle(), "Sign In page title doesn't match");
+		
+		signInPageFactory = new SignInPageFactory(driver);
+		signInPageFactory.signin(dat, abc123, 33);
 	}
+	
+	
+	
 	
 }
