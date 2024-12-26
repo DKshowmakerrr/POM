@@ -1,5 +1,27 @@
 package Test.TestCase;
+import static org.testng.Assert.assertEquals;
 
-public class SignInTest {
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
+import Test.Base.BaseSetup;
+import Test.PagesSetup.SignInPage;
+public class SignInTest extends BaseSetup {
+	private WebDriver driver;
+	public SignInPage signInPage;
+	
+	@BeforeClass
+	public void setUp() {
+		driver = getDriver();
+	}
+	
+	@Test
+	public void SignIn() {
+		System.out.println(driver);
+		signInPage = new SignInPage(driver);
+		assertEquals(signInPage.getSignInPageTitle(), "Sign In page title doesn't match");
+	}
+	
 }

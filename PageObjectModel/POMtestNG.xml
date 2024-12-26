@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Page Object test example">
+	<parameter name="browserType" value="chrome" />
+	<parameter name="appURL"
+		value="https://anhtester.startkatalyst.com/account/sign-in" />
+
+	<test name="sample test">
+		<classes>
+			<class name="com.anhtester.testcases.SignInTest">
+				<methods>
+					<include name="signIn" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

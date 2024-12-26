@@ -59,10 +59,9 @@ public class BaseSetup {
 		driver.navigate().to(appURL);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		return driver;
-		ass
 	}
 	//chạy hàm initializeTestBaseSetup trước khi class này được gọi
-	@Parameters({"browserType","appURL" } );
+	@Parameters({"browserType","appURL"});
 	@BeforeClass
 	public void initializeTestBaseSetUp(String browserType, String appURL) {
 		try {
